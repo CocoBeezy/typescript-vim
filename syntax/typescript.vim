@@ -128,7 +128,9 @@ syntax keyword typescriptGlobalObjects Array Boolean Date Function Infinity JSON
 
 syntax keyword typescriptExceptions try catch throw finally Error EvalError RangeError ReferenceError SyntaxError TypeError URIError
 
-syntax keyword typescriptReserved constructor declare as interface module abstract enum int short export interface static byte extends long super char final native synchronized class float package throws goto private transient debugger implements protected volatile double import public type namespace from get set keyof
+syntax keyword typescriptReserved constructor interface module abstract enum int short interface static byte extends long char final native synchronized class float package throws goto private transient debugger implements protected volatile double public type namespace get set keyof ReturnType
+syntax keyword typescriptReservedFile as declare module export import from
+syntax keyword typescriptReservedSuper super
 "}}}
 "" typescript/DOM/HTML/CSS specified things"{{{
 
@@ -235,7 +237,7 @@ if version >= 508 || !exists("did_typescript_syn_inits")
   endif
 
   "typescript highlighting
-  HiLink typescriptParameters Operator
+  HiLink typescriptParameters Parameter
   HiLink typescriptSuperBlock Operator
 
   HiLink typescriptEndColons Exception
@@ -276,7 +278,9 @@ if version >= 508 || !exists("did_typescript_syn_inits")
   HiLink typescriptParensErrA Error
   HiLink typescriptParensErrB Error
   HiLink typescriptParensErrC Error
-  HiLink typescriptReserved Keyword
+  HiLink typescriptReserved Type
+  HiLink typescriptReservedFile Keyword
+  HiLink typescriptReservedSuper Parameter
   HiLink typescriptOperator Operator
   HiLink typescriptType Type
   HiLink typescriptNull Type
