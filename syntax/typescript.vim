@@ -197,10 +197,10 @@ if main_syntax == "typescript"
 endif
 
 syntax keyword typescriptFuncKeyword function
-"syntax region typescriptFuncDef start="function" end="\(.*\)" contains=typescriptFuncKeyword,typescriptFuncArg keepend
-"syntax match typescriptFuncArg "\(([^()]*)\)" contains=typescriptParens,typescriptFuncComma contained
-"syntax match typescriptFuncComma /,/ contained
-" syntax region typescriptFuncBlock contained matchgroup=typescriptFuncBlock start="{" end="}" contains=@typescriptAll,typescriptParensErrA,typescriptParensErrB,typescriptParen,typescriptBracket,typescriptBlock fold
+syntax region typescriptFuncDef start="function" end="\(.*\)" contains=typescriptFuncKeyword,typescriptFuncArg keepend
+syntax match typescriptFuncArg "\(([^()]*)\)" contains=typescriptParens,typescriptFuncComma contained
+syntax match typescriptFuncComma /,/ contained
+syntax region typescriptFuncBlock contained matchgroup=typescriptFuncBlock start="{" end="}" contains=@typescriptAll,typescriptParensErrA,typescriptParensErrB,typescriptParen,typescriptBracket,typescriptBlock fold
 
 syn match typescriptBraces "[{}\[\]]"
 syn match typescriptParens "[()]"
