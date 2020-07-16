@@ -199,7 +199,7 @@ if main_syntax == "typescript"
 endif
 
 syntax keyword typescriptFuncKeyword function
-syntax region typescriptArrowFunction start="@typescriptStorageClass" end="\s*=\*s\(" skipwhite
+syntax region typescriptArrowFunction start="const|let|var" end="\s*=\*s\(" skipwhite
 syntax region typescriptFuncDef start="function" end="\(.*\)" contains=typescriptFuncKeyword,typescriptFuncArg keepend
 syntax match typescriptFuncArg "\(([^()]*)\)" contains=typescriptParens,typescriptFuncComma contained
 syntax match typescriptFuncComma /,/ contained
