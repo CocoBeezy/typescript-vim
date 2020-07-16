@@ -199,6 +199,7 @@ if main_syntax == "typescript"
 endif
 
 syntax keyword typescriptFuncKeyword function
+syntax region typescriptArrowFunction start="@typescriptStorageClass" end="\s*=\*s\(" skipwhite
 syntax region typescriptFuncDef start="function" end="\(.*\)" contains=typescriptFuncKeyword,typescriptFuncArg keepend
 syntax match typescriptFuncArg "\(([^()]*)\)" contains=typescriptParens,typescriptFuncComma contained
 syntax match typescriptFuncComma /,/ contained
@@ -315,6 +316,7 @@ if version >= 508 || !exists("did_typescript_syn_inits")
   HiLink typescriptAjaxMethods Function
   HiLink typescriptAjaxProperties Special
 
+  HiLink typescriptArrowFunc Function
   HiLink typescriptFuncDef Title
   HiLink typescriptFuncArg Special
   HiLink typescriptFuncComma Operator
